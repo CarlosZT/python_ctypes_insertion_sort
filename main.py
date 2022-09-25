@@ -1,7 +1,7 @@
 from ctypes import *
 
-#Se importa la libreria en C
-libc = CDLL("C:/Users/ChaarlyZ/OneDrive - CINVESTAV/Escritorio/Maestria/1er Cuatrimestre/Algoritmos y complejidad/Prácticas/Sorting/insort.so")
+#Se importa la libreria en C (Es recomendable usar el Absolute Path en lugar del Relative Path)
+libc = CDLL("./insort.so")
 
 #Se definen los tipos de argumentos que recibe la función
 libc.insort.argtypes = [POINTER(c_int), c_int]
