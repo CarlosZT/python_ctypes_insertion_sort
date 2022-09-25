@@ -16,7 +16,7 @@ BEST_CASE = np.arange(0, input_size, 1)
 #Current case selected
 A = BEST_CASE
 
-#Dependences to the Ctypes
+#C implementation dependences
 libc = CDLL(path)
 libc.insort.argtypes = [POINTER(c_int), c_int]
 size = len(A)
